@@ -127,7 +127,7 @@ function respond() {
   } 
   else if(request.text && botRegexSh.test(request.text)) {
     this.res.writeHead(200);
-    postMessage("¯\\_(ツ)_/¯");
+    postMessage("https://www.gannett-cdn.com/-mm-/6fc6652ba08fa32f64ec970c748e65bdbd543ca7/c=0-160-3417-2729&r=x404&c=534x401/local/-/media/2017/03/22/TennGroup/Knoxville/636257857180235576-AP17080860762254.jpg");
     this.res.end();
   } 
   else if(request.text && botRegexWk.test(request.text)) {
