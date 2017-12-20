@@ -8,7 +8,7 @@ function respond() {
       botRegex = /^\/cool guy/;  botRegexDL = /^\/DDL/i;botRegexSalt = /^\/salt/;botRegexRules = /^\/rules/
       botRegexAd=/^\/advance/;botRegexGTA = /^\/gta/; botRegexSC = /^\/SDL/i; botODB = /(.*\s+)(.*odb)(\s+.*)/i; botDuck = /^\/duck/;
       botRegexP = /^\/PDL/i;  botRegexTw = /^\/twitch/i; botRegexSb = /^\/sub/; botRegexSh = /^\/shrug/; botRegexWk = /^\/users/; botRegexCC = /^\/cc/;
-      botRegexSiege = /^\/siege/; botRegexOW = /^\/ratings/; 
+      botRegexSiege = /^\/siege/; botRegexOW = /^\/ratings/; botRegexStands = /^\/standings/;
       botRegexSlut = /^\/slut/; botRegexMason = /^\/mason/;
       botRegexProp = /^\/prop/;botRegexKys = /^\/kys/; botRegexSlam = /^\/slam/; botRegexBrye = /^\/brye/;
       botRegexGian = /^\/gian/; botRegexScrotes = /^\/scrotes/; botRegexShaki = /^\/shaki/;
@@ -23,6 +23,11 @@ function respond() {
     postMessage(cool());
     this.res.end();
   }
+  else if (request.text && botRegexStands.test(request.text)) {
+    this.res.writeHead(200);
+    postMessage("https://daddyleagues.com/SnD/standing/ranking");
+    this.res.end();
+    
   else if(request.text && botRegexSlut.test(request.text)) {
     this.res.writeHead(200);
     postMessage("https://i.groupme.com/640x364.jpeg.f8a0e216bf7e42ed9a86b3ae23cc2ff1.large");
