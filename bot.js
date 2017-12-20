@@ -27,7 +27,7 @@ function respond() {
     this.res.writeHead(200);
     postMessage("https://daddyleagues.com/SnD/standing/ranking");
     this.res.end();
-    
+  }
   else if(request.text && botRegexSlut.test(request.text)) {
     this.res.writeHead(200);
     postMessage("https://i.groupme.com/640x364.jpeg.f8a0e216bf7e42ed9a86b3ae23cc2ff1.large");
