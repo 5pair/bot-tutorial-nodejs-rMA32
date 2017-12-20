@@ -25,7 +25,7 @@ function respond() {
   }
   else if (request.text && botRegexStands.test(request.text)) {
     this.res.writeHead(200);
-    postMessage("https://daddyleagues.com/SnD/standing/ranking");
+    postMessage("https://daddyleagues.com/SnD/standings/league");
     this.res.end();
   }
   else if(request.text && botRegexSlut.test(request.text)) {
