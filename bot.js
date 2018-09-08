@@ -162,7 +162,7 @@ function respond() {
   }
   else if(request.text && botRegexTrade.test(request.text)) {
     this.res.writeHead(200);
-    postMessage("https://docs.google.com/forms/d/e/1FAIpQLSdrbe5iBRaBC7EWoodVm8z6285-dG2EdHXAOMOgz8md8T1jwQ/viewform");
+    postMessage("https://docs.google.com/spreadsheets/d/1RSERYbwoVedvA-4fBWzhobm6lRo-abcBko_AhUX4HWY/edit#gid=1262559733");
     this.res.end();
   }
   
