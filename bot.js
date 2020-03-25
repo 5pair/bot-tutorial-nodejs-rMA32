@@ -19,6 +19,8 @@ function respond() {
       botRegexHelp = /^\/help/;
       botSoftDoot = /^\/dootdootdoot/;
       botDancingDoot = /^\/DootDoot/;
+      botCommList = /^\/commishinfo;
+      botTCList = /^\/tcinfo;
       
       botRegexBitch = /^\/bitch/; botRegexGame = /^\/game/; botRegexBG = /^\/bg/; botRegexClown = /^\/clowning/; botRegexNoVance = /^\/novance/;
       siege1 = 'https://i.groupme.com/350x419.png.adc8c73a6c1547e0a9e04320296329f8'; siege2 = 'https://i.groupme.com/1279x752.jpeg.aa5d0401e0df495bba4b4e09dc5a6bd7'
@@ -31,6 +33,18 @@ function respond() {
     postMessage(cool());
     this.res.end();
   }
+  
+   else if(request.text && botCommList.test(request.text)) {
+    this.res.writeHead(200);
+    postMessage("Commissioners. Contact for issues, questions:\n- MIKL (RIP)\n- Buccanneers - Jay\n- Chiefs - Brad\n- Cowboys - Thomas\n- Redskins - Kenny");
+    this.res.end();
+  }
+  
+   else if(request.text && botTCList.test(request.text)) {
+    this.res.writeHead(200);
+    postMessage("Trade Committee Members:\n- Buccanneers - Jay\n- Chiefs - Brad\n- Cowboys - Thomas\n- Panthers - Raza\n- Redskins - Kenny");
+    this.res.end();
+  } 
   
   else if(request.text && botDancingDoot.test(request.text)) {
     this.res.writeHead(200);
