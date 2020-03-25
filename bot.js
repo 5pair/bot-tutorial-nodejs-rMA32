@@ -21,7 +21,7 @@ function respond() {
       botDancingDoot = /^\/DootDoot/;
       botCommList = /^\/commishinfo/;
       botTCList = /^\/tcinfo/;
-      botRegexStatLeader = /^\/statboard/i
+      botRegexStatLeader = /^\/statboard/i;
       
       botRegexBitch = /^\/bitch/; botRegexGame = /^\/game/; botRegexBG = /^\/bg/; botRegexClown = /^\/clowning/; botRegexNoVance = /^\/novance/;
       siege1 = 'https://i.groupme.com/350x419.png.adc8c73a6c1547e0a9e04320296329f8'; siege2 = 'https://i.groupme.com/1279x752.jpeg.aa5d0401e0df495bba4b4e09dc5a6bd7'
