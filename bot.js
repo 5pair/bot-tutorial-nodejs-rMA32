@@ -17,6 +17,8 @@ function respond() {
       botRegexSchedule = /^\/schedule/;
       botRegexMulti = /^\/mstream/i;
       botRegexHelp = /^\/help/;
+      botSoftDoot = /^\/dootdootdoot;
+      botDancingDoot = /^\/DootDoot;
       
       botRegexBitch = /^\/bitch/; botRegexGame = /^\/game/; botRegexBG = /^\/bg/; botRegexClown = /^\/clowning/; botRegexNoVance = /^\/novance/;
       siege1 = 'https://i.groupme.com/350x419.png.adc8c73a6c1547e0a9e04320296329f8'; siege2 = 'https://i.groupme.com/1279x752.jpeg.aa5d0401e0df495bba4b4e09dc5a6bd7'
@@ -30,9 +32,21 @@ function respond() {
     this.res.end();
   }
   
+  else if(request.text && botDancingDoot.test(request.text)) {
+    this.res.writeHead(200);
+    postMessage("https://media.tenor.com/images/1970ddb19e0493351a4c0c13fa4cb401/tenor.gif");
+    this.res.end();
+  } 
+  
+  else if(request.text && botSoftDoot.test(request.text)) {
+    this.res.writeHead(200);
+    postMessage("https://media.giphy.com/media/Y2bmgFIyzz7r2/200.gif");
+    this.res.end();
+  } 
+  
   else if(request.text && botRegexHelp.test(request.text)) {
     this.res.writeHead(200);
-    postMessage("HELP MENU\n ----DL Commands----\n -To view a specific team's schedule:\n/sdl [team abbreviation]\n -To view a specific team's depth chart:\n/ddl [team abbreviation]\n -To view the league's weekly schedule:\n /schedule\n -To view the league's current standings:\n /standings\n -To view a player or players based on name:\n /pdl [name]\n ----Trades/POS Changes/Suspensions----\n -To view trades, position changes, and suspensions:\n /trades\n ----Rules----\n -To view all rules\n /Rules\n -To view statcaps ad hoc:\n /statcap\n -To view 4th down rules ad hoc:\n /4thdown\n ----STREAMS----\n -To post a singular stream:\n/twitch [username] [short description optional]\n -To post multiple streams at once (platform doesn't matter):\n /mstream [username]/[username]\n NOTE: '/' between usernames is REQUIRED.\n ----FOR FUN----\n Just try them out:\n /duck\n /salt\n /game\n /bg\n /clowning\n /bitch");
+    postMessage("HELP MENU\n ----DL Commands----\n -To view a specific team's schedule:\n/sdl [team abbreviation]\n -To view a specific team's depth chart:\n/ddl [team abbreviation]\n -To view the league's weekly schedule:\n /schedule\n -To view the league's current standings:\n /standings\n -To view a player or players based on name:\n /pdl [name]\n ----Trades/POS Changes/Suspensions----\n -To view trades, position changes, and suspensions:\n /trades\n ----Rules----\n -To view all rules\n /Rules\n -To view statcaps ad hoc:\n /statcap\n -To view 4th down rules ad hoc:\n /4thdown\n ----STREAMS----\n -To post a singular Twitch stream:\n/twitch [username] [short description optional]\n -To post a singular Mixer stream:\n/mixer [username]\n -To post multiple streams at once (platform doesn't matter):\n /mstream [username]/[username]\n NOTE: '/' between usernames is REQUIRED.\n ----FOR FUN----\n Just try them out:\n /duck\n /salt\n /game\n /bg\n /clowning\n /bitch");
     this.res.end();
   } 
   
