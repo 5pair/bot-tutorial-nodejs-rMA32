@@ -37,7 +37,7 @@ function respond() {
   
     else if(request.text && botRegexStatLeader.test(request.text)) {
     this.res.writeHead(200);
-    postMessage("http://daddyleagues.com/rcfm/stats/"+request.text.substring(12,request.text.length));
+    postMessage("http://daddyleagues.com/rcfm/stats/"+request.text.substring(11,request.text.length));
     this.res.end();
   }
   
