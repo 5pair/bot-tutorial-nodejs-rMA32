@@ -22,6 +22,7 @@ function respond() {
       botCommList = /^\/commishinfo/;
       botTCList = /^\/tcinfo/;
       botRegexStatLeader = /^\/statboard/i;
+      botSportsBook = /^\/betline/;
       
       botRegexBitch = /^\/bitch/; botRegexGame = /^\/game/; botRegexBG = /^\/bg/; botRegexClown = /^\/clowning/; botRegexNoVance = /^\/novance/;
       siege1 = 'https://i.groupme.com/350x419.png.adc8c73a6c1547e0a9e04320296329f8'; siege2 = 'https://i.groupme.com/1279x752.jpeg.aa5d0401e0df495bba4b4e09dc5a6bd7'
@@ -29,12 +30,18 @@ function respond() {
   var teamAb = ["NE","NO","ARI","PHI","CLE","TEN","OAK","DAL","IND","SEA","CIN","PIT","JAC"
                 ,"BAL","SD","DEN","MIN","ATL","KC","NYG","GB","DET","HOU","STL","CHI","CAR",
                 "MIA","BUF","SF","WAS","NYJ","TB"]
+  
   if(request.text && botRegex.test(request.text)) {
     this.res.writeHead(200);
     postMessage(cool());
     this.res.end();
   }
   
+  else if(request.text && botSportsook.test(request.text)) {
+    this.res.writeHead(200);
+    postMessage("https://docs.google.com/spreadsheets/d/1NyOawd4ml19bq0eTC50lcwaCv-ZeCMJhrFr3eqCpjHw");
+    this.res.end();
+  }
     else if(request.text && botRegexStatLeader.test(request.text)) {
     this.res.writeHead(200);
     postMessage("http://daddyleagues.com/rcfm/stats/"+request.text.substring(11,request.text.length));
@@ -43,7 +50,7 @@ function respond() {
   
    else if(request.text && botCommList.test(request.text)) {
     this.res.writeHead(200);
-    postMessage("Commissioners. Contact for issues, questions:\n- MIKL (RIP)\n- Buccanneers - Jay\n- Chiefs - Brad\n- Cowboys - Thomas\n- Redskins - Kenny");
+    postMessage("Commissioners. Contact for issues, questions:\n- Browns - Mikl \n- Buccanneers - Jay\n- Chiefs - Brad\n- Cowboys - Thomas\n- Redskins - Kenny");
     this.res.end();
   }
   
