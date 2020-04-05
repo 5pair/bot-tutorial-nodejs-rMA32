@@ -37,7 +37,7 @@ function respond() {
     this.res.end();
   }
   
-  else if(request.text && botSportsook.test(request.text)) {
+  else if(request.text && botSportsBook.test(request.text)) {
     this.res.writeHead(200);
     postMessage("https://docs.google.com/spreadsheets/d/1NyOawd4ml19bq0eTC50lcwaCv-ZeCMJhrFr3eqCpjHw");
     this.res.end();
